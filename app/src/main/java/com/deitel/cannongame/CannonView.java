@@ -32,9 +32,9 @@ public class CannonView extends SurfaceView
    private boolean dialogIsDisplayed = false;   
                
    // constants for game play
-   public static final int TARGET_PIECES = 72; // sections in the target
-   public static final int MISS_PENALTY = 1; // seconds deducted on a miss
-   public static final int HIT_REWARD = 4; // seconds added on a hit
+   public static final int TARGET_PIECES = 84; // sections in the target
+   public static final int MISS_PENALTY = 2; // seconds deducted on a miss
+   public static final int HIT_REWARD = 3; // seconds added on a hit
 
    // variables for the game loop and tracking statistics
    private boolean gameOver; // is the game over?
@@ -172,7 +172,7 @@ public class CannonView extends SurfaceView
       cannonPaint.setStrokeWidth(lineWidth * 1.5f); // set line thickness
       blockerPaint.setStrokeWidth(lineWidth); // set line thickness      
       targetPaint.setStrokeWidth(lineWidth); // set line thickness       
-      backgroundPaint.setColor(Color.YELLOW); // set background color
+      backgroundPaint.setColor(Color.BLUE); // set background color
 
       newGame(); // set up and start a new game
    } // end method onSizeChanged
@@ -400,9 +400,9 @@ public class CannonView extends SurfaceView
          {
             // alternate coloring the pieces 
             if (i % 2 != 0)
-               targetPaint.setColor(Color.RED);
+               targetPaint.setColor(Color.DKGRAY);
             else
-               targetPaint.setColor(Color.GREEN);
+               targetPaint.setColor(Color.YELLOW);
             
             canvas.drawLine(currentPoint.x, currentPoint.y, target.end.x,
                (int) (currentPoint.y + pieceLength), targetPaint);
