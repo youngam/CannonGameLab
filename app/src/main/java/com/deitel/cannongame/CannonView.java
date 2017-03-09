@@ -172,7 +172,7 @@ public class CannonView extends SurfaceView
       cannonPaint.setStrokeWidth(lineWidth * 1.5f); // set line thickness
       blockerPaint.setStrokeWidth(lineWidth); // set line thickness      
       targetPaint.setStrokeWidth(lineWidth); // set line thickness       
-      backgroundPaint.setColor(Color.BLUE); // set background color
+      backgroundPaint.setColor(Color.GREEN); // set background color
 
       newGame(); // set up and start a new game
    } // end method onSizeChanged
@@ -400,9 +400,9 @@ public class CannonView extends SurfaceView
          {
             // alternate coloring the pieces 
             if (i % 2 != 0)
-               targetPaint.setColor(Color.DKGRAY);
+               targetPaint.setColor(Color.CYAN);
             else
-               targetPaint.setColor(Color.YELLOW);
+               targetPaint.setColor(Color.DKGRAY);
             
             canvas.drawLine(currentPoint.x, currentPoint.y, target.end.x,
                (int) (currentPoint.y + pieceLength), targetPaint);
